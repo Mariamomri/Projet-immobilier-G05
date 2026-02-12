@@ -1,0 +1,37 @@
+$blue-dark:#011430; 
+$gold: #EFBA5A;
+$white: #FFFFFF;
+$none: none;
+$_20px: 20px;
+$gap: 100px;
+
+@mixin space-between{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header{
+@include space-between();
+background: $blue-dark;
+color: $white;
+} 
+
+a{
+  color: $white;
+  text-decoration: $none;
+  font-size: $_20px;
+
+  &:hover{
+    color: $gold;
+  }
+}
+
+nav{
+  gap: $gap;
+  @include space-between();
+  margin-right: $_50px;
+}
+
+
+

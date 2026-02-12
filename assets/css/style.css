@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #011430;
+  color: #FFFFFF;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 20px;
+}
+a:hover {
+  color: #EFBA5A;
+}
+
+nav {
+  gap: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+}/*# sourceMappingURL=style.css.map */
