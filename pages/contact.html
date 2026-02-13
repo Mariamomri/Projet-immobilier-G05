@@ -1,104 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cedric & Mariam Immobilière</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Cédric & Mariam</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
+  <body>
+    <header>
+      <img src="assets/images/logo.png" alt="logo" width="150px" />
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="pages/aVendre.html">A Vendre</a>
+        <a href="pages/aLouer.html">A Louer</a>
+        <a href="pages/contact.html">Contact</a>
+        <i class="fas fa-user"></i>
+      </nav>
+    </header>
 
-<!-- HERO BOOTSRAP -->
+    <!-- HERO BOOTSRAP -->
 
-  <div class="p-5 text-center bg-image" style="
-      background-image: url('/assets/images/logo.png');
-      height: 400px;
-      
-    ">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <h1 class="mb-3">Nous sommes à votre écoute</h1><br><br>
-          <h4 class="mb-3">Une question ? Un projet ?</h4>
-          <h4 class="mb-3">Nous vous répondons rapidement</h4>
-          <h4 class="mb-3" style="font-style: oblique;">"Prêt à concrétiser votre projet immobilier ? Contactez-nous dès aujourd’hui"</h4>
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url(&quot;/assets/images/logo.png&quot;);
+        height: 400px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Nous sommes à votre écoute</h1>
+            <br /><br />
+            <h4 class="mb-3">Une question ? Un projet ?</h4>
+            <h4 class="mb-3">Nous vous répondons rapidement</h4>
+            <h4 class="mb-3" style="font-style: oblique">
+              "Prêt à concrétiser votre projet immobilier ? Contactez-nous dès
+              aujourd’hui"
+            </h4>
 
-          <!-- <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a> -->
+            <!-- <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a> -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<!--  -->
-<!--  -->
+    <!--  -->
+    <!--  -->
 
+    <!-- FORMULAIRE BOOTSRAP -->
+    <section>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div>
+        <button>
+          <p>Nous contacter</p>
+        </button>
+      </form>
+    </section>
 
+    <footer class="footer">
+      <div class="footer-left">
+        <img
+          src="/assets/images/logofooter.png"
+          alt="logo"
+          class="footer-logo"
+        />
 
+        <div class="footer-info">
+          <p><strong>Horaires</strong></p>
+          <p>Lun-Ven : 9h00-18h</p>
+          <p>Samedi : 10h00-16h00</p>
+          <p>Dimanche : Sur rendez-vous</p>
 
+          <br />
 
-
-
-
-
-
-<!-- FORMULAIRE BOOTSRAP -->
-<section>
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-<button>
-  <p>Nous contacter</p>
-</button>
-</form>
-</section>
-
-
-
-
-
-
-
-      <footer class="footer">
-    <div class="footer-left">
-      <img src="/assets/images/logofooter.png" alt="logo" class="footer-logo">
-
-      <div class="footer-info">
-        <p><strong>Horaires</strong></p>
-        <p>Lun-Ven : 9h00-18h</p>
-        <p>Samedi : 10h00-16h00</p>
-        <p>Dimanche : Sur rendez-vous</p>
-
-        <br>
-
-        <p><strong>Email</strong></p>
-        <p>contact@cedric-mariam-immo.be</p>
-        <p>Réponse sous 24h</p>
+          <p><strong>Email</strong></p>
+          <p>contact@cedric-mariam-immo.be</p>
+          <p>Réponse sous 24h</p>
+        </div>
       </div>
-    </div>
 
-    <div class="footer-right">
-      <span>Facebook</span><br><br>
-      <span>X (Twitter)</span><br><br>
-      <span>Instagram</span>
-    </div>
-  </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      <div class="footer-right">
+        <span>Facebook</span><br /><br />
+        <span>X (Twitter)</span><br /><br />
+        <span>Instagram</span>
+      </div>
+    </footer>
 
-</body>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
 </html>
