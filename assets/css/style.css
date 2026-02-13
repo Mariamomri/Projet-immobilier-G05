@@ -10,6 +10,64 @@ body {
   line-height: 1.6;
 }
 
+.hero {
+  text-align: center;
+
+}
+
+form {
+  margin: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+
+/***cedric/
+/* index - hero */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+/* index - feedback */
+.feedback {
+  padding: 50px;
+  text-align: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+/***/
 header {
   display: flex;
   justify-content: space-between;
