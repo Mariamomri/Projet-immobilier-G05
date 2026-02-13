@@ -78,6 +78,25 @@ nav{
     margin: 1rem auto 0;
 }
 
+// section 1 de page a vendere
+.borderyellow{
+    border-left-color: 5px solid $gold-light;
+    background-color: $gold-light;
+    width: 60%;
+    height: 505px;
+ 
+    position: relative;
+}
+
+.deuxfoto{
+    display: flex;
+    justify-content: space-between;
+}
+.fotoborder{
+    position: absolute;
+    left:10px;
+}
+
 /* carte */
 .property-card {
     position: $relative;
