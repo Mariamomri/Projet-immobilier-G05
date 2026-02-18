@@ -16,9 +16,9 @@ body {
 }
 
 form {
-  margin: 100px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin: 100px auto;
+  padding: 0 20px;
+  max-width: 800px;
 }
 
 .c {
@@ -48,7 +48,7 @@ form {
   bottom: 40px;
   left: 40px;
   color: white;
-  font-size: 80px;
+  font-size: clamp(30px, 8vw, 80px);
   font-weight: bold;
 }
 
@@ -133,6 +133,15 @@ header {
   align-items: center;
   background: #011430;
   color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header img {
+  max-width: 150px;
+  height: auto;
+  width: 100%;
 }
 
 a {
@@ -146,11 +155,46 @@ a:hover {
 }
 
 nav {
-  gap: 100px;
+  gap: 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+justify-content: space-between;
+align-items: center;
+margin-right: 50px;
 }
 
 /* la sessione */
@@ -302,51 +346,301 @@ nav {
 .footer {
   background-color: #001e4a;
   color: white;
-  padding: 40px 60px;
+  padding: 40px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .footer-left {
   display: flex;
-  gap: 300px;
+  gap: 80px;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-logo {
-  width: 50%;
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
+  object-fit: cover;
 }
 
 .footer-info p {
   margin: 3px 0;
+  font-size: 14px;
 }
 
-.footer-right {
+/* Social Bar */
+.social-bar {
+  background-color: white;
+  padding: 40px 20px;
   display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .social {
   display: flex;
-  gap: 500px;
-  margin-left: 100px;
-  padding: 15px;
+  gap: 50px;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social i {
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.social i:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
 }
 
 /* Responsive */
 
+@media (max-width: 1200px) {
+  nav {
+    gap: 20px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  form {
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .footer-left {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
-  .team-container {
+  header {
+    padding: 15px 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #011430;
     flex-direction: column;
-    align-items: center;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-top: 2px solid #d4a574;
+    z-index: 1000;
+  }
+
+  nav.active {
+    max-height: 400px;
+  }
+
+  nav a {
+    display: block;
+    padding: 18px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: rgba(212, 165, 116, 0.1);
+    color: #d4a574;
+    padding-left: 35px;
+  }
+
+  nav a:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav i {
+    display: block;
+    padding: 18px 25px;
+    font-size: 18px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav i:hover {
+    color: #d4a574;
+    background-color: rgba(212, 165, 116, 0.1);
+  }
+
+  header img {
+    max-width: 120px;
+  }
+
+  a {
+    font-size: 16px;
   }
 
   .hero h1 {
-    font-size: 50px;
+    font-size: clamp(24px, 6vw, 50px);
     left: 20px;
     bottom: 20px;
   }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  form {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .footer {
+    padding: 30px 15px;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .footer-left {
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .social {
+    gap: 20px;
+  }
+
+  .social-bar {
+    padding: 30px 15px;
+  }
+
+  .social i {
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .social {
+    gap: 40px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  header img {
+    max-width: 100px;
+  }
+
+  nav {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(20px, 5vw, 40px);
+    bottom: 15px;
+    left: 15px;
+  }
+
+  form {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-left {
+    gap: 15px;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 625px 10px;
+  }
+
+  .social i {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .social {
+    gap: 3 .social i {
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .footer-info p,
+    .footer-right p {
+      font-size: 12px;
+    }
+
+    .social {
+      gap: 15px;
+      font-size: 18px;
+    }
+
+    .team-card {
+      max-width: 100%;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+    }
+  }
